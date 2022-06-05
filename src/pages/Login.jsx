@@ -29,7 +29,7 @@ export default function Login() {
             };
 
             const loginRequest = await axios.post(
-                "http://localhost:2000/auth/login",
+                "https://binarsandi-instagram-api.herokuapp.com/auth/login",
                 userToLoginPayload
             );
 
@@ -58,7 +58,7 @@ export default function Login() {
         };
     
         const loginGoogleRequest = await axios.post(
-            "http://localhost:2000/auth/login-google",
+            "https://binarsandi-instagram-api.herokuapp.com/auth/login-google",
             userToLoginPayload
         );
     

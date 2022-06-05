@@ -52,7 +52,7 @@ function Home() {
 
         // 2. Check token validity from API
         const currentUserRequest = await axios.get(
-          "http://localhost:2000/auth/me",
+          "https://binarsandi-instagram-api.herokuapp.com/auth/me",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -95,7 +95,7 @@ function Home() {
   const posts = async () => {
     try {
       const getPostsData = await axios.get(
-        'http://localhost:2000/posts'
+        'https://binarsandi-instagram-api.herokuapp.com/posts'
       );
 
       const payloadData = await getPostsData.data.data.get_all_posts_data;
@@ -112,7 +112,7 @@ function Home() {
       const token = localStorage.getItem("token");
 
       const deletedPost = await axios.delete(
-        `http://localhost:2000/post/delete/${postToDelete.id}`,
+        `https://binarsandi-instagram-api.herokuapp.com/post/delete/${postToDelete.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -299,7 +299,7 @@ function Home() {
             <Col lg={4} key={data.id}>
               <Card className="mt-3">
                 <Card.Body>
-                  <Card.Img variant="top" src={`http://localhost:2000/public/files/${data.picture}`} height="240" />
+                  <Card.Img variant="top" src={`https://binarsandi-instagram-api.herokuapp.com/public/files/${data.picture}`} height="240" />
                   <Card.Title className="mt-3">{data.title}</Card.Title>
                   <Card.Text className="text-dark">
                     {data.description}
