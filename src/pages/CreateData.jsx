@@ -29,7 +29,7 @@ export default function Create() {
             userToCreatePayload.append("picture", pictureField);
 
             const createRequest = await axios.post(
-                "https://binarsandi-instagram-api.herokuapp.com/post/create",
+                "http://localhost:2000/post/create",
                 userToCreatePayload,{
                     headers:{
                         Authorization: `Bearer ${token}`,

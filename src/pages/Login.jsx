@@ -29,7 +29,7 @@ export default function Login() {
             };
 
             const loginRequest = await axios.post(
-                "https://binarsandi-instagram-api.herokuapp.com/auth/login",
+                "http://localhost:2000/auth/login",
                 userToLoginPayload
             );
 
@@ -58,7 +58,7 @@ export default function Login() {
         };
     
         const loginGoogleRequest = await axios.post(
-            "https://binarsandi-instagram-api.herokuapp.com/auth/login-google",
+            "http://localhost:2000/auth/login-google",
             userToLoginPayload
         );
     
@@ -91,7 +91,7 @@ export default function Login() {
                         <Nav.Link className="nav-item text-white" href="#link">Product</Nav.Link>
                         <Nav.Link className="nav-item text-white" href="#link">Location</Nav.Link>
                         <Nav.Link className="nav-item text-white" href="#link">Service</Nav.Link>
-                        <Nav.Link className="nav-item text-white" href="#link">How We Work</Nav.Link>
+                        <Nav.Link className="nav-item text-white" href="#link">About</Nav.Link>
                     </Nav>
                     <Form className="d-flex project__class">
                         <a class="nav-link btn btn__cp text-dark" href="#"> Register </a>
