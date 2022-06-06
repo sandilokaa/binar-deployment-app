@@ -31,7 +31,7 @@ export default function Register() {
             };
 
             const registerRequest = await axios.post(
-                "http://localhost:2000/auth/register",
+                "https://binarsandi-instagram-api.herokuapp.com/auth/register",
                 userToRegisterPayload
             );
 
