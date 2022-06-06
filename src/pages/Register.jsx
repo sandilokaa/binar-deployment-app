@@ -70,7 +70,7 @@ export default function Register() {
                         <Nav.Link className="nav-item text-white" href="#link">About</Nav.Link>
                     </Nav>
                     <Form className="d-flex project__class">
-                        <a class="nav-link btn btn__cp text-dark" href="#"> Login </a>
+                        <a className="nav-link btn btn__cp text-dark" href="#"> Login </a>
                     </Form>
                     </Navbar.Collapse>
                 </Container>

@@ -94,7 +94,7 @@ export default function Login() {
                         <Nav.Link className="nav-item text-white" href="#link">About</Nav.Link>
                     </Nav>
                     <Form className="d-flex project__class">
-                        <a class="nav-link btn btn__cp text-dark" href="#"> Register </a>
+                        <a className="nav-link btn btn__cp text-dark" href="#"> Register </a>
                     </Form>
                     </Navbar.Collapse>
                 </Container>
