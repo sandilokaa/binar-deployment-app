@@ -34,7 +34,7 @@ export default function Update() {
 
 
             const updateRequest = await axios.put(
-                `https://binarsandi-instagram-api.herokuapp.com/post/update/${id}`,
+                `${process.env.REACT_APP_INSTAGRAM_BE_API}/post/update/${id}`,
                 userToUpdatePayload, {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ export default function Update() {
     const getPostById = async () => {
         try {
 
-            const responsePosts = await axios.get(`https://binarsandi-instagram-api.herokuapp.com/post/${id}`);
+            const responsePosts = await axios.get(`${process.env.REACT_APP_INSTAGRAM_BE_API}/post/${id}`);
 
             const postData = await responsePosts.data.data.getdata;
 

@@ -31,7 +31,7 @@ export default function Register() {
             };
 
             const registerRequest = await axios.post(
-                "https://binarsandi-instagram-api.herokuapp.com/auth/register",
+                `${process.env.REACT_APP_INSTAGRAM_BE_API}/auth/register`,
                 userToRegisterPayload
             );
 
@@ -70,7 +70,7 @@ export default function Register() {
                         <Nav.Link className="nav-item text-white" href="#link">About</Nav.Link>
                     </Nav>
                     <Form className="d-flex project__class">
-                        <a className="nav-link btn btn__cp text-dark" href="#"> Login </a>
+                        <a className="nav-link btn btn__cp text-dark" href="#Login"> Login </a>
                     </Form>
                     </Navbar.Collapse>
                 </Container>

@@ -29,7 +29,7 @@ export default function Login() {
             };
 
             const loginRequest = await axios.post(
-                "https://binarsandi-instagram-api.herokuapp.com/auth/login",
+                `${process.env.REACT_APP_INSTAGRAM_BE_API}/auth/login`,
                 userToLoginPayload
             );
 
@@ -58,7 +58,7 @@ export default function Login() {
         };
     
         const loginGoogleRequest = await axios.post(
-            "https://binarsandi-instagram-api.herokuapp.com/auth/login-google",
+            `${process.env.REACT_APP_INSTAGRAM_BE_API}/auth/login-google`,
             userToLoginPayload
         );
     
@@ -94,7 +94,7 @@ export default function Login() {
                         <Nav.Link className="nav-item text-white" href="#link">About</Nav.Link>
                     </Nav>
                     <Form className="d-flex project__class">
-                        <a className="nav-link btn btn__cp text-dark" href="#"> Register </a>
+                        <a className="nav-link btn btn__cp text-dark" href="#Register"> Register </a>
                     </Form>
                     </Navbar.Collapse>
                 </Container>
@@ -130,7 +130,7 @@ export default function Login() {
                             </Form.Group>
 
                             <div className="my-3">
-                                <GoogleOAuthProvider clientId="878652378412-rmjjckepnmtfqmn6b099tf95vsvmhuoh.apps.googleusercontent.com">
+                                <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
                                     <GoogleLogin
                                         onSuccess={onLoginGoogleSuccess}
                                         onError={() => {

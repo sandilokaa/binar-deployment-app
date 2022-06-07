@@ -52,7 +52,7 @@ function Home() {
 
         // 2. Check token validity from API
         const currentUserRequest = await axios.get(
-          "https://binarsandi-instagram-api.herokuapp.com/auth/me",
+          `${process.env.REACT_APP_INSTAGRAM_BE_API}/auth/me`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -95,7 +95,7 @@ function Home() {
   const posts = async () => {
     try {
       const getPostsData = await axios.get(
-        'https://binarsandi-instagram-api.herokuapp.com/posts'
+        `${process.env.REACT_APP_INSTAGRAM_BE_API}/posts`
       );
 
       const payloadData = await getPostsData.data.data.get_all_posts_data;
@@ -112,7 +112,7 @@ function Home() {
       const token = localStorage.getItem("token");
 
       const deletedPost = await axios.delete(
-        `https://binarsandi-instagram-api.herokuapp.com/post/delete/${postToDelete.id}`,
+        `${process.env.REACT_APP_INSTAGRAM_BE_API}/post/delete/${postToDelete.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -302,7 +302,7 @@ function Home() {
             {data.map((data) => (
               <Col lg={3} key={data.id} className="mb-5">
                 <div class="gallery-image">
-                  <img src={`https://binarsandi-instagram-api.herokuapp.com/public/files/${data.picture}`} alt="Gambar" height="240px" />
+                  <img src={`${process.env.REACT_APP_INSTAGRAM_BE_API}/public/files/${data.picture}`} alt="Gambar" height="240px" />
                   <a href="#href">
                     <div class="img-overlay">
                       <div class="img-description">
